@@ -1,0 +1,13 @@
+#!/bin/ksh
+#
+DBMS=oracle
+ORACLE_HOME=/oracle/u01/app/oracle/product/8.0.5
+PATH=/opt/v6.0/SUNWspro/bin:/usr/ccs/bin:${ORACLE_HOME}/bin:${PATH}
+LD_LIBRARY_PATH=/opt/v6.0/SUNWspro/lib:${ORACLE_HOME}/lib:${LD_LIBRARY_PATH}
+SHLIB_PATH=${ORACLE_HOME}/lib:${SHLIB_PATH}
+TNS_ADMIN=${ORACLE_HOME}/network/admin
+ORACLE_PATH=${ORACLE_HOME}/bin:${ORACLE_HOME}/lib
+export DBMS
+export PATH LD_LIBRAY_PATH SHLIB_PATH
+export ORACLE_HOME TNS_ADMIN ORACLE_PATH
+$*
